@@ -8,7 +8,7 @@ inputFile = "IntegerArray.txt"
 f = open(inputFile)
 array = []
 for number in f:
-    array.append(IntegerArrayt(number))
+    array.append(int(number))
 
 
 def merge(left, right):
