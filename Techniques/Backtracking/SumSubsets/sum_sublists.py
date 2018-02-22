@@ -10,8 +10,9 @@ def sumSubsets(xs, s):
 
     while subsets:
         current = subsets.pop()
+        current_sum = sum(current)
 
-        if sum(current) == s:
+        if current_sum == s:
             sorted_current = sorted(current)
             if not sorted_current in result:
                 result.append(sorted_current)
@@ -35,6 +36,4 @@ def sumSubsets(xs, s):
 
 print(sumSubsets([1, 2, 3, 4, 5], 5))
 import cProfile
-cProfile.run('sumSubsets([1, 1, 2, 4, 4, 4, 7, 9, 9, 13, 13, 13, 15, 15, 16, 16, 16, 19, 19, 20], 36)')
-
-print(sumSubsets([1, 1, 2, 4, 4, 4, 7, 9, 9, 13, 13, 13, 15, 15, 16, 16, 16, 19, 19, 20], 36))
+cProfile.run('print(sumSubsets([1, 1, 2, 4, 4, 4, 7, 9, 9, 13, 13, 13, 15, 15, 16, 16, 16, 19, 19, 20], 36))')
