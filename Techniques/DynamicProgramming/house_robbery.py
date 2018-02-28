@@ -35,5 +35,6 @@ print(houseRobber([2, 5, 1]))
 print(houseRobber([4, 9, 7, 1]))
 print(houseRobber([2, 7, 9, 3, 1]))
 print(houseRobber([1, 3, 1, 3, 100]))
+print(houseRobber([10, 100, 25, 250, 330]))
 
 

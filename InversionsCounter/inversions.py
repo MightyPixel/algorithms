@@ -25,10 +25,10 @@ def merge(left, right):
             merged.append(right[j])
             j += 1
 
-    if i <= left_len - 1:
-        merged += left[i:]
-    if j <= right_len - 1:
+    if i == left_len:
         merged += right[j:]
+    if j == right_len:
+        merged += left[i:]
 
     return merged, inversions
 
@@ -37,8 +37,10 @@ def countInversions(arr):
     if len(arr) == 1:
        return arr, 0
 
-    left, left_inv = countInversions(arr[:len(arr)//2])
-    right, right_inv = countInversions(arr[len(arr)//2:])
+    mid = len(arr)//2
+
+    left, left_inv = countInversions(arr[:mid])
+    right, right_inv = countInversions(arr[mid:])
     merged, split_inv = merge(left, right)
 
     return merged, split_inv + left_inv + right_inv
