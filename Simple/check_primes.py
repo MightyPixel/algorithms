@@ -1,3 +1,8 @@
+"""
+Find Primes up to p
+Time O(n^0.5)
+"""
+
 import math
 
 def is_prime(n):

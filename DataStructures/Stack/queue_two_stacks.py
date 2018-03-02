@@ -1,5 +1,7 @@
-
 class MyQueue(object):
+    """
+    Simulate Queue with two stacks
+    """
     def __init__(self):
         self.mode = 'WRITE'
         self.lstack = []

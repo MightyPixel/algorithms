@@ -4,7 +4,6 @@ class Node:
         self.left = None
         self.right = None
 
-
 def max_child(root):
     if not root.left and not root.right:
         return root.data

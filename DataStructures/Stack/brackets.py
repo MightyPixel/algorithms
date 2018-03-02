@@ -1,5 +1,7 @@
-
 def is_matched(expression):
+    """
+    Finds if expression is valid in terms of opened/closed brackets
+    """
     brackets = []
     oppening_bracket = ['(', '{', '[']
     matching_bracket = {'(': ')', '{': '}', '[': ']'}

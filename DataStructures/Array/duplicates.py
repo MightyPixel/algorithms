@@ -2,6 +2,11 @@ import math
 
 
 def firstDuplicate(xs):
+    """
+    Finds the first duplicate element in xs
+    Time O(n)
+    Space O(1)
+    """
     for x in xs:
         positive_x = abs(x)
         positive_x_index = positive_x - 1
@@ -14,6 +19,11 @@ def firstDuplicate(xs):
 
 
 def firstNotRepeatingCharacter(string):
+    """
+    Finds the first non repeating element in xs
+    Time O(n)
+    Space O(1)
+    """
     alphabet_len = ord('z') - ord('a') + 1
     unique_letter_index = [None] * alphabet_len
 

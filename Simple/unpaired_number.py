@@ -3,6 +3,9 @@
 import sys
 
 def lonely_integer(a):
+    """
+    Using bit manipulation determine integer < 100 that is unique in array
+    """
     index = 1 << 100
     for x in a:
         x_mask = 1 << x

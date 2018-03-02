@@ -1,5 +1,7 @@
-
 def ransom_note(magazine, ransom):
+    """
+    Finds out if it is possible to create ransom with subset of magazine
+    """
     if len(magazine) < len(ransom):
         return False
 

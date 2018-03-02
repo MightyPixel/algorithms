@@ -257,21 +257,3 @@ def reverseNodesInKGroups(l, k):
 # print_linked_list(mergeTwoLinkedLists(a, b))
 # print_linked_list(mergeTwoLinkedLists(get_linked_list([1, 1]), get_linked_list([0])))
 # print_linked_list(reverseNodesInKGroups(get_linked_list([1, 2, 3, 4, 5]), 2))
-
-# def memo(f):
-#     lookup = {}
-
-#     def f_memoized(n):
-#        if not lookup.get(n):
-#           lookup[n] = f(n)
-
-#       return lookup.get(n)
-
-#     return f_memoized
-
-# @memo
-def fib(n):
-   if n <= 1:
-      return n
-   else:
-      return fib(n-2) + fib(n-1)
