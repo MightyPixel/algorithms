@@ -4,6 +4,11 @@ class Node:
         self.left = None
         self.right = None
 
+    def __str__(self):
+        return str(self.data) + '(' + str(self.left) + ', ' + str(self.right) + ')'
+
+
+
 def max_child(root):
     if not root.left and not root.right:
         return root.data
@@ -40,6 +45,17 @@ def is_bst(root, mini, maxi):
 def checkBST(root):
     return is_bst(root, -sys.maxsize, sys.maxsize)
 
+def lca(root, v1, v2):
+    """
+    Return the lowest common ancestor (LCA) of v1 and v2 in the binary search tree.
+    """
+    if v1 < root.data < v2 or v2 < root.data < v1 or root.data == v1 or root.data == v2:
+        return root
+    if v1 < root.data and v2 < root.data:
+        return lca(root.left, v1, v2)
+    if root.data < v1 and root.data < v2:
+        return lca(root.right, v1, v2)
+
 a = Node(4)
 b = Node(2)
 c = Node(6)
@@ -56,4 +72,10 @@ b.right = e
 c.left = g
 c.right = f
 #g.left = h
+print(a)
 print(checkBST(a))
+print(lca(a, 3, 5).data)
+print(lca(a, 1, 3).data)
+print(lca(a, 4, 7).data)
+print(lca(a, 7, 4).data)
+
